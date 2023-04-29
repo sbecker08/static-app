@@ -7,7 +7,7 @@ module.exports = {
           port: '',
           pathname: '/api/image/property/**',
         },
-      ],
-      output:"standalone"
-    }
+      ]
+    },    
+    output:"standalone"
   }
