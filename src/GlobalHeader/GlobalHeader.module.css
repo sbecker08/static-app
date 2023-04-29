@@ -1,0 +1,65 @@
+.bannerContainer {
+    background: #002855;
+    width: 100%;
+    height: 108px;
+    padding: 0px 25px;
+    display: flex;
+    
+    font-family: 'Roboto', sans-serif;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    top: 0;
+    position: fixed;
+
+    z-index: 100;
+
+    /*z-index: 100;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;*/
+}
+
+
+.headerSeparator {
+    margin-top: 108px;
+}
+
+.logoContainer {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuContainer {
+    padding-left: 0px;
+    display: flex;
+}
+
+.menuItem {
+    list-style-image: none;
+    list-style-type: none;
+}
+
+.menuItem a {
+    line-height: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+
+    padding: 15px 2px 8px;
+    margin: 0px 7px;
+}
+
+.menuItem a:hover {
+    cursor: pointer;
+}
+
+.uppercaseMenuItem {
+    text-transform: uppercase;
+}

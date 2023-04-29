@@ -1,0 +1,72 @@
+.galleryCard {
+    margin: 0px 15px;
+
+    width: 370px;
+    height: 500px;
+
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+}
+
+.cardImage {
+    top: 0;
+}
+
+.headerSection {
+    padding: 25px;
+    padding-bottom: 15px;
+    height: 105px;
+}
+
+.bodySection {
+    padding: 25px;
+    padding-top: 0px;
+}
+
+.propertyType {
+    color: #FF7F32;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.propertyName {
+    color: #002855;
+    letter-spacing: 1px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    margin: 0px;
+}
+
+.bodySection {
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    color: #273139;
+
+}
+
+
+.bodySection p {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.bodySection span {
+    margin-left: 13px
+}
+
+.price {
+    color: #002855;
+    letter-spacing: 0.7px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
+    font-size: 16px;
+}

@@ -1,0 +1,14 @@
+.gallery {
+    width: 1280px;
+    margin: 0px auto;
+
+    overflow: visible;
+}
+
+.galleryTrack {
+    width: 85000px;
+}
+
+.cardContainer {
+    float: left;
+}

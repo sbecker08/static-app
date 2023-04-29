@@ -1,0 +1,118 @@
+.widgetBackdrop::before {
+    background: linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.widgetBackdrop {    
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+
+    width: 100%;
+
+    position: relative;
+
+    background-image: url('../../public/HeroImages/HeroImage1.jpg');
+    background-size: cover;
+
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.introContentContainer {
+    position: relative;
+    width: 1280px;
+    margin: auto;
+
+    padding: 0px 15px;
+
+    color: white;
+}
+
+.locationSection{
+    height: 125px;
+}
+
+.locationText{
+    float: right;
+    top: 0px;
+}
+
+.mainBannerText {
+    font-size: 54px;
+
+    margin: 0px;
+}
+
+.subBannerText {
+    font-size: 19px;
+
+    letter-spacing: normal;
+}
+
+.searchContainer {
+    height: 100px;
+}
+
+.statsOuterContainer {
+    background-color: rgba(0, 40, 85, 0.76);
+    position: relative;
+    bottom: 0;
+
+    margin-top: 100px;
+
+    width: 100%;
+
+    color: white;
+}
+
+.statsInnerContainer {    
+    width: 1280px;
+    margin: auto;
+
+    display: flex;
+
+    padding: 25px 0px;
+}
+
+.statsContainer {
+    width: 33%;
+    text-align: center;
+}
+
+.statsHeader {
+    font-size: 42px;
+    margin: 0px;
+}
+
+.statsSubHeader {
+    font-size: 18px;
+    font-weight: 300;
+
+    margin: 0px;
+}
+
+.statsSubHeader::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 78px;
+    background: #FF7F32;
+    margin: 10px auto;
+}
+
+.statsCaption {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.statsCaption span {
+    font-weight: 700;
+}

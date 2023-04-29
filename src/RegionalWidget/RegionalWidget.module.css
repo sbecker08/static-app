@@ -1,0 +1,49 @@
+.regionalWidgetContainer {
+    width: 100%;
+
+    background-color: white;
+    padding: 30px 0px;
+
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #002855;
+
+    
+    top: 108px;
+    position: -webkit-sticky;
+    position: sticky;
+
+    z-index: 100;
+}
+
+.regionalWidgetInnerContainer {
+    width: 1280px;
+
+    display: flex;
+
+    margin: 0px auto;
+}
+
+.linkContainerContainer {
+    display: flex;
+    
+    margin-left: auto;
+}
+
+.linkContainerContainer ul {
+    display: flex;
+    margin: 0px;
+}
+
+.linkContainerContainer ul li {
+    list-style-image: none;
+    list-style-type: none;
+
+    margin-right: 20px;
+}
+
+.linkContainerContainer a:hover {
+    color: #FF7F32;
+}
