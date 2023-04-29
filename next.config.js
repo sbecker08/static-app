@@ -8,5 +8,6 @@ module.exports = {
           pathname: '/api/image/property/**',
         },
       ],
-    },
+      output:"standalone"
+    }
   }
