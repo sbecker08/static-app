@@ -17,9 +17,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cpx .next/static/css/** .next/standalone/.next/static/css && cpx .next/static/media/** .next/standalone/.next/static/media && cpx public/** .next/standalone/public",
-    "start": "next start",
-    "copy": "cpx .next/static/css/** .next/standalone/.next/static/css && cpx .next/static/media/** .next/standalone/.next/static/media && cpx public/** .next/standalone/public"
+    "build": "next build && cpx .next/static/** .next/standalone/.next/static && cpx public/** .next/standalone/public",
+    "start": "node server.js",
+    "copy": "cpx .next/static/** .next/standalone/.next/static"
   },
   "eslintConfig": {
     "extends": [
