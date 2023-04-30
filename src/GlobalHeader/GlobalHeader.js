@@ -6,7 +6,7 @@ function GlobalHeader() {
       <div>
         <div className={styles.bannerContainer}>
           <div className={styles.logoContainer}>
-            <Image src="/MM_logo2018_white.svg" alt="dallesInn" width={185} height={70} />
+            <Image src="https://www.marcusmillichap.com/Areas/MM/img/MM_logo2018_white.svg" alt="dallesInn" width={185} height={70} />
           </div>
           <ul className={styles.menuContainer}>
             <li className={styles.menuItem + ' ' + styles.uppercaseMenuItem} >

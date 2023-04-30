@@ -7,6 +7,12 @@ module.exports = {
           port: '',
           pathname: '/api/image/property/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'www.marcusmillichap.com',
+          port: '',
+          pathname: '/**',
+        }
       ]
     },    
     output:"standalone"
