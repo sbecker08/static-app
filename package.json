@@ -17,9 +17,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cpx .next/static/** .next/standalone/.next/static && cpx public/** .next/standalone/public",
+    "build": "next build && cpx '.next/static/**' '.next/standalone/.next/static' && cpx 'public/**' '.next/standalone/public'",
     "start": "node server.js",
-    "copy": "cpx .next/static/** .next/standalone/.next/static"
+    "copy": "cpx '.next/static/**' '.next/standalone/.next/static'"
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +36,7 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version" 
     ]
   },
   "devDependencies": {
