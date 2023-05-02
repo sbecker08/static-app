@@ -9,17 +9,17 @@ import Head from 'next/head'
 
 function Home({ bannerText, galleryCardInfo }) {
 
-    const [data, setData] = useState({ val: 0 });
+    //const [data, setData] = useState({ val: 0 });
 
     //Can do client side stuff
-    useEffect(() => {
-        setData({ val: Math.random()})
-        }, []);
+    //useEffect(() => {
+    //    setData({ val: Math.random()})
+    //    }, []);
 
     return (
       <div className={styles.homePageWrapper}>    
         <Head>
-          <title>My page title</title>
+          <title>Pacific Northwest | Marcus Millichap</title>
           <meta name="description" content="The landing page for the pacific northwest version of Marcus & Millichap."></meta>
         </Head>    
         <GlobalHeader />
@@ -27,7 +27,6 @@ function Home({ bannerText, galleryCardInfo }) {
         <RegionalWidget />
         <RegionalImpact />
         <Gallery galleryCardInfo={galleryCardInfo} />
-        {data.val}
         <br />
         <br />
         <br />

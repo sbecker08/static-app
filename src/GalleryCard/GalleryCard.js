@@ -5,7 +5,7 @@ function GalleryCard({ imageUrl, propertyType, propertyName, location, unitDetai
 
     return (
         <div className={styles.galleryCard}>      
-            <Image src={imageUrl} width={368} height={200} alt="Property Photo" className={styles.cardImage} fill />
+            <Image src={imageUrl} width={368} height={200} alt="Property Photo" className={styles.cardImage} />
             <div className={styles.headerSection}>
                 <h2 className={styles.propertyType}>{propertyType}</h2>
                 <h1 className={styles.propertyName}>{propertyName}</h1>
