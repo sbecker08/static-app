@@ -13,6 +13,10 @@ module.exports = {
           port: '',
           pathname: '/**',
         }
-      ]
+      ],
+      i18n: {
+        locales: ["en"],
+        defaultLocale: "en",
+      }
     }
   }

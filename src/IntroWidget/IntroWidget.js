@@ -12,12 +12,12 @@ function GlobalHeader({ bannerText }) {
                     <h2 className={styles.subBannerText}>Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.</h2>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <button>Find A Property</button>
-                    <button>Gain Insights</button>
-                    <button>Connect With An Advisor</button>
+                    <button className={styles.mmButton}>Find A Property</button>
+                    <button className={styles.mmButton}>Gain Insights</button>
+                    <button className={styles.mmButton}>Connect With An Advisor</button>
                 </div>                
                 <div className={styles.searchContainer}>
-                    <input></input>
+                    <input  className={styles.mmInput} type="text" aria-label="Search" ></input>
                 </div>
             </div>
             <div className={styles.statsOuterContainer}>

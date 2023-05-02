@@ -116,3 +116,14 @@
 .statsCaption span {
     font-weight: 700;
 }
+
+.mmButton {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.mmInput {
+    width: 1280px;
+    margin-top: 5px;;
+    padding: 10px;;
+}
