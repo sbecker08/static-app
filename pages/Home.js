@@ -5,6 +5,7 @@ import IntroWidget from '../src/IntroWidget/IntroWidget';
 import RegionalWidget from '../src/RegionalWidget/RegionalWidget';
 import RegionalImpact from '../src/RegionalImpact/RegionalImpact';
 import Gallery from '../src/Gallery/Gallery';
+import Head from 'next/head'
 
 function Home({ bannerText, galleryCardInfo }) {
 
@@ -16,7 +17,11 @@ function Home({ bannerText, galleryCardInfo }) {
         }, []);
 
     return (
-      <div className={styles.homePageWrapper}>        
+      <div className={styles.homePageWrapper}>    
+        <Head>
+          <title>My page title</title>
+          <meta name="description" content="The landing page for the pacific northwest version of Marcus & Millichap."></meta>
+        </Head>    
         <GlobalHeader />
         <IntroWidget bannerText={bannerText} />
         <RegionalWidget />
