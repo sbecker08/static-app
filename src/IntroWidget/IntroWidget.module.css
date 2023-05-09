@@ -20,7 +20,7 @@
 
     position: relative;
 
-    background-image: url('../../public/HeroImages/HeroImage1.webp');
+    background-image: url('../../public/HeroImages/animatedBackground.webp');
     background-size: cover;
 
     display:flex;
