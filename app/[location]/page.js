@@ -25,12 +25,14 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {   
     return [
+        { location: '' },
         { location: 'southwest' },
         { location: 'pacific-northwest' }
     ]
   }
 
 const bannerLookup = {
+    '': "Marcus & Millichap",
     'southwest': "Southwest",
     'pacific-northwest': 'Pacific Northwest'
 }
