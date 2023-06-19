@@ -1,6 +1,6 @@
 import styles  from './IntroWidget.module.css'
 
-function GlobalHeader({ bannerText }) {
+function GlobalHeader({ header, subHeader, children }) {
     /*
             <div className={styles.vimeoOuterWrapper}>
                 <div className={styles.vimeoInnerWrapper}>
@@ -16,8 +16,8 @@ function GlobalHeader({ bannerText }) {
                     <p className={styles.locationText}>Location: Pacific Northwest | Change Location</p>
                 </div>
                 <div className={styles.bannerContainer}>
-                    <h1 className={styles.mainBannerText}>{bannerText}</h1>
-                    <h2 className={styles.subBannerText}>Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.</h2>
+                    <h1 className={styles.mainBannerText}>{header}</h1>
+                    <h2 className={styles.subBannerText}>{subHeader}</h2>
                 </div>
                 <div className={styles.buttonContainer}>
                     <button className={styles.mmButton}>Find A Property</button>
@@ -30,21 +30,7 @@ function GlobalHeader({ bannerText }) {
             </div>
             <div className={styles.statsOuterContainer}>
                 <div className={styles.statsInnerContainer}>
-                    <div className={styles.statsContainer}>
-                        <h1 className={styles.statsHeader}>$86.3 Billion</h1>
-                        <h2 className={styles.statsSubHeader}>Value of Recently Closed Transactions</h2>
-                        <p className={styles.statsCaption}>Pacific Northwest: $4.2B</p>
-                    </div>
-                    <div className={styles.statsContainer}>
-                        <h1 className={styles.statsHeader}>12,272</h1>
-                        <h2 className={styles.statsSubHeader}>Closed Sales in Most Recent Year</h2>
-                        <p className={styles.statsCaption}>Pacific Northwest: 465</p>
-                    </div>
-                    <div className={styles.statsContainer}>
-                        <h1 className={styles.statsHeader}>$12.8 Billion</h1>
-                        <h2 className={styles.statsSubHeader}>Total Value of Recent Listings</h2>
-                        <p className={styles.statsCaption}>Pacific Northwest: $2.2B</p>
-                    </div>
+                    { children }
                 </div>
             </div>
         </div>

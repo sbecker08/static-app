@@ -1,0 +1,32 @@
+.statsContainer {
+    width: 33%;
+    text-align: center;
+}
+
+.statsHeader {
+    font-size: 32px;
+    margin: 0px;
+}
+
+.statsSubHeader {
+    font-size: 18px;
+    font-weight: 300;
+
+    margin: 0px;
+}
+
+.statsSecondarySubHeader {
+    font-size: 18px;
+    font-weight: 300;
+
+    margin: 0px;
+}
+
+.statsSubHeader::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 78px;
+    background: #FF7F32;
+    margin: 10px auto;
+}
