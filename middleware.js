@@ -15,11 +15,16 @@ export function middleware(request) {
   const originalPath = request.nextUrl.pathname;
   console.log(`Visitor from ${console.log(request.geo)}`);
 
+  const pnwStates = ['WA', 'OR', 'ID'];
+  const swStates = ['CA', 'NV', 'NM', 'AZ'];
+
   // Specify the correct route based on the requests location
-  if (country === BLOCKED_COUNTRY) {
+  if (pnwStates.includes(request?.geo?.region)) {
     request.nextUrl.pathname = '/pacific-northwest';
-  } else {
+  } else if(swStates.includes(request?.geo?.region)) {
     request.nextUrl.pathname = `/southwest`;
+  } else {
+    request.nextUrl.pathname = `/`;
   }
  
   // Rewrite to URL
