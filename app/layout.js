@@ -1,6 +1,7 @@
 import '../globalStyles.css';
 import { Frank_Ruhl_Libre } from 'next/font/google';
 import React from 'react';
+import { MmAuthenticationZone } from '../modules/MmAuthentication/MmAuthenticationZone';
 
 const frankRuhl300 = Frank_Ruhl_Libre({ subsets: ['latin'], weight: '300' })
 const frankRuhl400 = Frank_Ruhl_Libre({ subsets: ['latin'], weight: '400' })
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
             </head>
             
             <body>
-                {children}
+                <MmAuthenticationZone>
+                    {children}
+                </MmAuthenticationZone>
             </body>
         </html>
     );
