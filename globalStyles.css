@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     margin: 0 0;
@@ -11,4 +14,12 @@ a {
 
 a:hover {
     cursor: pointer;
+}
+
+.frank-ruhl {
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.roboto {    
+    font-family: 'Roboto', sans-serif;
 }

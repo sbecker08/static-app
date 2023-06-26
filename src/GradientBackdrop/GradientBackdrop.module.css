@@ -1,0 +1,70 @@
+.bgGradient {
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+
+    z-index: 1;
+}
+
+.widgetBackdrop {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+
+    width: 100%;
+
+    position: relative;
+
+    /*background-image: url('../../public/HeroImages/HeroImage1.webp');*/
+    background-size: cover;
+
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.vimeoOuterWrapper {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.vimeoInnerWrapper {
+    position: relative;
+    top: 0;
+    width: 150vw;
+    height: 150vw;
+    overflow: hidden;
+    margin-top: -50%;
+}
+
+.vimeoVideo {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    border: 0px;
+    bottom: 0;
+}
+
+.vimeoInnerWrapper::before {    
+    background: linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

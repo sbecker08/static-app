@@ -1,4 +1,5 @@
 import styles  from './IntroWidget.module.css'
+import SingleStatComponent from '../SingleStatComponent/SingleStatComponent'
 
 function GlobalHeader({ header, subHeader, children }) {
     /*
@@ -9,20 +10,19 @@ function GlobalHeader({ header, subHeader, children }) {
             </div>
     */
     return (
-        <div className={styles.widgetBackdrop}>
-
-            <div className={styles.introContentContainer}>
-                <div className={styles.locationSection}>
-                    <p className={styles.locationText}>Location: Pacific Northwest | Change Location</p>
+        <div className={styles.introContainer}>
+            <div className="max-w-screen-xl w-full px-5 mx-auto z-10 text-white">
+                <div className="flex">
+                    <p className="ml-auto">Location: Pacific Northwest | Change Location</p>
                 </div>
-                <div className={styles.bannerContainer}>
-                    <h1 className={styles.mainBannerText}>{header}</h1>
-                    <h2 className={styles.subBannerText}>{subHeader}</h2>
+                <div className="mt-40">
+                    <h1 className="text-6xl m-0">{header}</h1>
+                    <h2 className="my-5 mb-10 text-xl">{subHeader}</h2>
                 </div>
-                <div className={styles.buttonContainer}>
-                    <button className={styles.mmButton}>Find A Property</button>
-                    <button className={styles.mmButton}>Gain Insights</button>
-                    <button className={styles.mmButton}>Connect With An Advisor</button>
+                <div>
+                    <a className="border-solid border border-slate-400 bg-mm-dark-blue text-white p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Find A Property</a>
+                    <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Gain Insights</a>
+                    <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Connect With An Advisor</a>
                 </div>                
                 <div className={styles.searchContainer}>
                     <input  className={styles.mmInput} type="text" aria-label="Search" ></input>
@@ -30,7 +30,9 @@ function GlobalHeader({ header, subHeader, children }) {
             </div>
             <div className={styles.statsOuterContainer}>
                 <div className={styles.statsInnerContainer}>
-                    { children }
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
                 </div>
             </div>
         </div>

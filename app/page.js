@@ -2,8 +2,10 @@ import GlobalHeader from '../src/GlobalHeader/GlobalHeader';
 import IntroWidget from '../src/IntroWidget/IntroWidget';
 import RegionalWidget from '../src/RegionalWidget/RegionalWidget';
 import RegionalImpact from '../src/RegionalImpact/RegionalImpact';
+import GradientBackdrop from '../src/GradientBackdrop/GradientBackdrop'
 import Gallery from '../src/Gallery/Gallery';
 
+import img from '../public/HeroImages/HeroImage1.webp'
 
 export default function Page() {
 
@@ -13,7 +15,9 @@ export default function Page() {
     return (
         <>
             <GlobalHeader />
-            <IntroWidget bannerText={`Welcome to Marcus & Millichap`} />
+            <GradientBackdrop backgrounGradientStyle="linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%)" backgroundImage={img}>
+                <IntroWidget header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
+            </GradientBackdrop>
             <RegionalWidget />
             <RegionalImpact />
             <Gallery galleryCardInfo={properties} />
