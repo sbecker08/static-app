@@ -1,18 +1,21 @@
 import styles  from './RegionalWidget.module.css'
 
 function RegionalWidget() {
+
+    const links = [ 'Our Impact', 'Current Listings', 'Research', 'News & Events' ];
+
     return (
-        <div className={styles.regionalWidgetContainer}>            
-            <div className={styles.regionalWidgetInnerContainer}>
-                <div className={styles.linkContainerContainer}>
-                    <span>Pacific Northwest: </span>
-                    <ul>
-                        <li><a href="#">Our Impact</a></li>
-                        <li><a href="#">Current Listings</a></li>
-                        <li><a href="#">Research</a></li>
-                        <li><a href="#">News & Events</a></li>
+        <div className="flex py-6 w-full">            
+            <div className="max-w-screen-xl flex ml-auto">
+                <div className="flex  text-mm-blue font-semibold frank-ruhl text-sm">
+                    <span className="mr-5" >Pacific Northwest: </span>
+                    <ul className="flex">
+                        {
+                            links.map(l => (
+                                <li className="mr-5 "><a href="#">{l}</a></li>
+                            ))
+                        }
                     </ul>
-                    <button>Connect With An Advisor</button>
                 </div>
             </div>
         </div>

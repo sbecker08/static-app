@@ -21,7 +21,7 @@ function GlobalHeader() {
 
     return (
     <>
-      <nav className="text-white fixed top-0 w-full flex flex-wrap items-center justify-between px-7 py-4 bg-mm-blue max-xl:py-7">
+      <nav className="text-white fixed top-0 w-full flex flex-wrap items-center justify-between px-7 py-4 z-50 bg-mm-blue max-xl:py-7">
         <div className="w-full flex flex-wrap items-center">
           <div className="max-xl:mx-auto flex justify-items-center">
             <Image src="https://www.marcusmillichap.com/Areas/MM/img/MM_logo2018_white.svg" alt="dallesInn" width={185} height={70} />

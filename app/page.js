@@ -20,6 +20,9 @@ export default function Page() {
             <GradientBackdrop backgrounGradientStyle="linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%)" backgroundImage={img}>
                 <IntroWidget header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
             </GradientBackdrop>
+            <RegionalWidget />
+            <RegionalImpact />
+            <div className='mb-[10000px]' ></div>
         </div>
     )
 }

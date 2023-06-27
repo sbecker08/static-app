@@ -41,13 +41,14 @@ export default async function Page({ params }) {
       })
     })
 */
+    const contentItem = {};
 
     return (
         <>
             <GlobalHeader />
-            <IntroWidget header={contentItem.fields.headline} subHeader={contentItem.fields.subtitle} >
+            <IntroWidget header={contentItem?.fields?.headline} subHeader={contentItem?.fields?.subtitle} >
               {
-                contentItem.fields.heroStats.map(s => {
+                contentItem?.fields?.heroStats.map(s => {
                   if(s.sys.contentType.sys.id == 'singleStat')
                     return (<SingleStatComponent header={s.fields.header} subHeader={s.fields.subHeader} secondaryText={s.fields.secondaryText} />)
                     if(s.sys.contentType.sys.id == 'doubleStat')
@@ -66,9 +67,9 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {   
     return [
-        { location: '' },
+        /*{ location: '' },
         { location: 'southwest' },
-        { location: 'pacific-northwest' }
+        { location: 'pacific-northwest' }*/
     ]
   }
 

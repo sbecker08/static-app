@@ -11,6 +11,7 @@ function GlobalHeader({ header, subHeader, children }) {
     */
     return (
         <>
+        <div className={styles.introContainer}>
             <div className="max-w-screen-xl w-full px-5 mx-auto z-10 text-white">
                 <div className="flex">
                     <p className="ml-auto">Location: Pacific Northwest | Change Location</p>
@@ -23,8 +24,19 @@ function GlobalHeader({ header, subHeader, children }) {
                     <a className="border-solid border border-slate-400 bg-mm-dark-blue text-white p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Find A Property</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Gain Insights</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Connect With An Advisor</a>
-                </div> 
+                </div>                
+                <div className={styles.searchContainer}>
+                    <input  className={styles.mmInput} type="text" aria-label="Search" ></input>
+                </div>
             </div>
+            <div className={styles.statsOuterContainer}>
+                <div className={styles.statsInnerContainer}>
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                </div>
+            </div>
+        </div>
         </>
     );
   }
