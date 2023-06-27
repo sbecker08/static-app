@@ -6,6 +6,9 @@ import Image from 'next/image'
 import { useState, useContext } from 'react';
 import { MmAuthenticationContext } from '../../modules/MmAuthentication/MmAuthenticationZone';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 function GlobalHeader() {
   
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -13,54 +16,41 @@ function GlobalHeader() {
 
     console.log(authenticationContext.user);
 
+    const links = [ 'Properties', 'Financing', 'Research', 'Advisors', 'Services' ]
+    const secondaryLinks = [ 'About', 'News & Events', 'Contact'  ]
+
     return (
 <>
-      <nav className="relative flex flex-wrap items-center justify-between px-7 py-4 bg-mm-blue">
-        <div className="container flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a >
-              <Image src="https://www.marcusmillichap.com/Areas/MM/img/MM_logo2018_white.svg" alt="dallesInn" width={185} height={70} />
-            </a>
-            <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              <i className="fas fa-bars"></i>
-            </button>
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex" : " hidden")
-            }
-          >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Share</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Tweet</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Pin</span>
-                </a>
-              </li>
+      <nav className="text-white relative flex flex-wrap items-center justify-between px-7 py-4 bg-mm-blue max-xl:py-6">
+        <div className="w-full flex flex-wrap items-center">
+          <div className="max-xl:mx-auto flex justify-items-center">
+            <Image src="https://www.marcusmillichap.com/Areas/MM/img/MM_logo2018_white.svg" alt="dallesInn" width={185} height={70} />
+            <ul className="max-xl:absolute max-xl:hidden ml-5 flex font-bold font-siz roboto pt-2 uppercase text-sm">
+              {
+                links.map(l => (
+                  <li className="mx-2 tracking-wider" >{l}</li>
+                ))
+              }
             </ul>
+          </div>
+          <div className="max-xl:hidden flex justify-items-center">
+            <ul className="max-xl:absolute max-xl:hidden flex font-bold font-siz roboto pt-2 text-sm">
+              {
+                secondaryLinks.map(l => (
+                  <li className="mx-2 tracking-wider" >{l}</li>
+                ))
+              }
+            </ul>
+          </div>          
+          <div className="ml-auto max-xl:absolute max-xl:left-5">
+            {
+              authenticationContext?.user ?
+              <div className={styles.loggedInIcon}>{authenticationContext.user.firstName[0] + authenticationContext.user.lastName[0]}</div> :
+              <span>Sign In/Up</span>
+            }
+          </div>
+          <div className="max-xl:absolute max-xl:right-5 max-xl:block hidden">
+            <FontAwesomeIcon size="xl" icon={faBars} />
           </div>
         </div>
       </nav>

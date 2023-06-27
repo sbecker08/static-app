@@ -1,4 +1,4 @@
-/*import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
  
 // The country to block from accessing the secret page
 const BLOCKED_COUNTRY = 'US';
@@ -32,4 +32,4 @@ export function middleware(request) {
     return NextResponse.redirect(request.nextUrl);
   else
     return;
-}*/
+}

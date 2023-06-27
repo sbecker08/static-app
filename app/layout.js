@@ -3,6 +3,10 @@ import { Frank_Ruhl_Libre } from 'next/font/google';
 import React from 'react';
 import { MmAuthenticationZone } from '../modules/MmAuthentication/MmAuthenticationZone';
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 const frankRuhl300 = Frank_Ruhl_Libre({ subsets: ['latin'], weight: '300' })
 const frankRuhl400 = Frank_Ruhl_Libre({ subsets: ['latin'], weight: '400' })
 const frankRuhl700 = Frank_Ruhl_Libre({ subsets: ['latin'], weight: '700' })

@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'mm-bright-blue': '#00ADFF',
         'mm-blue': '#002855',
         'mm-dark-blue': '#1A283C',
         'mm-orange': '#FF7F32'
