@@ -1,5 +1,5 @@
 .introContainer {
-    
+
 }
 
 .searchContainer {
@@ -21,7 +21,7 @@
 }
 
 .statsInnerContainer {    
-    width: 1280px;
+    max-width: 1280px;
     margin: auto;
 
     display: flex;

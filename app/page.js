@@ -13,7 +13,21 @@ export default function Page() {
     const properties = jsonResponse.data.map(d => d.attributes);
 
     return (
-        <>
+        <div >
+            
+            <GlobalHeader />
+            <div className='mt-20' ></div>
+            <GradientBackdrop backgrounGradientStyle="linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%)" backgroundImage={img}>
+                <IntroWidget header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
+            </GradientBackdrop>
+        </div>
+    )
+}
+/*
+
+
+            <div className='w-full h-10 bg-black' ></div>
+
             <GlobalHeader />
             <GradientBackdrop backgrounGradientStyle="linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%)" backgroundImage={img}>
                 <IntroWidget header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
@@ -21,6 +35,4 @@ export default function Page() {
             <RegionalWidget />
             <RegionalImpact />
             <Gallery galleryCardInfo={properties} />
-        </>
-    )
-}
+*/

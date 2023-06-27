@@ -74,3 +74,13 @@
     font-size: 20px;
     padding: 9px 10px;
 }
+
+.overlay {
+    background: rgba(255, 255, 255, 0.4);
+    top: 0px;
+    z-index: 1000;
+}
+
+.lineSeparator {
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
