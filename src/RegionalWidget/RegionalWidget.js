@@ -7,7 +7,7 @@ function RegionalWidget() {
     return (
         <div className="flex py-6 w-full">            
             <div className="max-w-screen-xl flex ml-auto">
-                <div className="flex  text-mm-blue font-semibold frank-ruhl text-sm">
+                <div className="flex  text-mm-blue font-semibold frank-ruhl text-sm pl-5">
                     <span className="mr-5" >Pacific Northwest: </span>
                     <ul className="flex">
                         {

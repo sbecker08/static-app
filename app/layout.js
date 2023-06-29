@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="This is the public facing website for the Marcus & Millichap Commercial Real Estate firm."></meta>
             <title>Marcus and Millichap</title>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
             </head>
             
             <body>

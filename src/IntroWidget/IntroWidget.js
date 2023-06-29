@@ -1,5 +1,6 @@
 import styles  from './IntroWidget.module.css'
 import SingleStatComponent from '../SingleStatComponent/SingleStatComponent'
+import CenterContainer from '../CenterContainer/CenterContainer';
 
 function GlobalHeader({ header, subHeader, children }) {
     /*
@@ -11,9 +12,9 @@ function GlobalHeader({ header, subHeader, children }) {
     */
     return (
         <>
-        <div className={styles.introContainer}>
-            <div className="max-w-screen-xl w-full px-5 mx-auto z-10 text-white">
-                <div className="flex">
+        <div className="text-white">
+            <CenterContainer>
+                <div className="flex pt-5">
                     <p className="ml-auto">Location: Pacific Northwest | Change Location</p>
                 </div>
                 <div className="mt-40">
@@ -28,13 +29,15 @@ function GlobalHeader({ header, subHeader, children }) {
                 <div className={styles.searchContainer}>
                     <input  className={styles.mmInput} type="text" aria-label="Search" ></input>
                 </div>
-            </div>
+            </CenterContainer>
             <div className={styles.statsOuterContainer}>
-                <div className={styles.statsInnerContainer}>
-                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
-                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
-                    <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
-                </div>
+                <CenterContainer>
+                    <div className="flex py-6">
+                        <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                        <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                        <SingleStatComponent header="Header" subHeader="Sub Header" secondaryText="Secondary Text" ></SingleStatComponent>
+                    </div>
+                </CenterContainer>
             </div>
         </div>
         </>

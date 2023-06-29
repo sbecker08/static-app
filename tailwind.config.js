@@ -11,6 +11,9 @@ module.exports = {
         'mm-blue': '#002855',
         'mm-dark-blue': '#1A283C',
         'mm-orange': '#FF7F32'
+      },
+      padding: {
+        'mm-scale': 'max(1.25rem, 5%)'
       }
     },
   },

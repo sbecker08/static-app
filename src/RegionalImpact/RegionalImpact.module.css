@@ -15,17 +15,30 @@
 }
 
 .regionalImpactInnerContainer{
-    width: 1280px;
+
+    width: 100%;
     margin: 0px auto;
     grid-area: 1 / 1 / 2 / 2;
     
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
     margin-bottom: 110px;
 }
 
 .regionalMap {
     display: block;
-    grid-area: 1 / 1 / 2 / 2;
-    
+    grid-area: 1 / 1 / 2 / 2;   
+}
+
+@media (max-width: 1024px)  {
+    .regionalMap{
+        display: none;
+    }
+
+    .ourImpactContainer {
+        width: 100% !important;
+    }
 }
 
 .ourImpactContainer {

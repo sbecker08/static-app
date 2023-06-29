@@ -1,12 +1,18 @@
 .gallery {
-    width: 1280px;
-    margin: 0px auto;
+    width: 100%;
 
+    
+    overflow: visible;
+}
+
+.galleryInner {
     overflow: visible;
 }
 
 .galleryTrack {
     width: 85000px;
+    
+    overflow: visible;
 }
 
 .cardContainer {
