@@ -3,7 +3,9 @@ import IntroWidget from '../src/IntroWidget/IntroWidget';
 import RegionalWidget from '../src/RegionalWidget/RegionalWidget';
 import RegionalImpact from '../src/RegionalImpact/RegionalImpact';
 import GradientBackdrop from '../src/GradientBackdrop/GradientBackdrop'
-import Gallery from '../src/Gallery/Gallery';
+import PropertyGallery from '../src/PropertyGallery/PropertyGallery';
+import NewsGallery from '../src/NewsGallery/NewsGallery';
+import ResearchGallery from '../src/ResearchGallery/ResearchGallery';
 
 import img from '../public/HeroImages/HeroImage1.webp'
 import CenterContainer from '../src/CenterContainer/CenterContainer';
@@ -24,11 +26,15 @@ export default function Page() {
             <RegionalWidget />
             <RegionalImpact />
             <CenterContainer>
-                <Gallery galleryCardInfo={properties} />
+                <PropertyGallery galleryCardInfo={properties} />
             </CenterContainer>
             <div className='mb-10' ></div>
             <CenterContainer>
-                <Gallery galleryCardInfo={properties} />
+                <ResearchGallery />
+            </CenterContainer>
+            <div className='mb-10' ></div>
+            <CenterContainer>
+                <NewsGallery />
             </CenterContainer>
             <div className='mb-[10000px]' ></div>
         </div>

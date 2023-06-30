@@ -1,17 +1,11 @@
-import styles  from './GalleryCard.module.css'
+import styles  from './GalleryPropertyCard.module.css'
+import GalleryImageCard from '../GalleryImageCard/GalleryImageCard';
 import Image from 'next/image';
 
-function GalleryCard({ imageUrl, propertyType, propertyName, location, unitDetails, capRate, price }) {
+function GalleryPropertyCard({ imageUrl, propertyType, propertyName, location, unitDetails, capRate, price }) {
 
     return (
-        <div className={styles.galleryCard}>      
-            <div className={styles.cardImageWrapper}>
-                <Image src={imageUrl} width={368} height={200} alt="Property Photo" className={styles.cardImage}  />
-            </div>
-            <div className={styles.headerSection}>
-                <h2 className={styles.propertyType}>{propertyType}</h2>
-                <h1 className={styles.propertyName}>{propertyName}</h1>
-            </div>
+        <GalleryImageCard imageUrl={imageUrl} superHeader={propertyType} header={propertyName}>     
             <div className={styles.bodySection}>
                 <p className="flex">
                     <Image src='/iconLocation.svg' width={12} height={17} alt="Location Icon" /><span>{location}</span>
@@ -26,9 +20,8 @@ function GalleryCard({ imageUrl, propertyType, propertyName, location, unitDetai
                     {price}
                 </p>
             </div>
-        </div>
+        </GalleryImageCard>
     );
   }
   
-export default GalleryCard;
-
+export default GalleryPropertyCard;

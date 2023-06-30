@@ -1,0 +1,28 @@
+
+.bodySection {
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    color: #273139;
+
+    margin-top: 25px;
+}
+
+
+.bodySection p {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.bodySection span {
+    margin-left: 13px
+}
+
+.price {
+    color: #002855;
+    letter-spacing: 0.7px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 600;
+    font-size: 16px;
+}

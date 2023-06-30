@@ -1,0 +1,12 @@
+.galleryCard {
+    margin: 0px;
+    margin-right: 30px;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    width: 370px;
+
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
+}
