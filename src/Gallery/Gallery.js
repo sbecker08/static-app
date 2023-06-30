@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import GalleryCard from '../GalleryCard/GalleryCard';
+import GalleryHeaderCard from '../GalleryHeaderCard/GalleryHeaderCard';
 import styles  from './Gallery.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -33,23 +34,34 @@ function Gallery({ galleryCardInfo }) {
                 grabCursor={true}    
                 pagination={true}
             >
+                <SwiperSlide>
+                    <div key="00" className={styles.cardContainer}>
+                        <GalleryHeaderCard 
+                            superHeader="Current Pacific Northwest Listings"
+                            header="Your Property Search Start Here"
+                            bodyText="Finding the right investment opportunity is easy when choosing from the industry’s largest, most diverse collection of exclusive commercial real estate listings. Start your search now."
+                            buttonOneText="View Available PNW Listings"
+                            buttonTwoText="View Available U.S. & Canada Listings"
+                            ></GalleryHeaderCard>
+                    </div>
+                </SwiperSlide>
                 {galleryCardInfo?.map((c, i) => { return (
                     <SwiperSlide>
-                        <div className={styles.cardContainer}>
+                        <div key={i} className={styles.cardContainer}>
                             <GalleryCard {...c}/>                      
                         </div>                     
                     </SwiperSlide>
                 );})}
                 {galleryCardInfo?.map((c, i) => { return (
                     <SwiperSlide>
-                        <div className={styles.cardContainer}>
+                        <div key={i + 6} className={styles.cardContainer}>
                             <GalleryCard {...c}/>                      
                         </div>                     
                     </SwiperSlide>
                 );})}
             </Swiper>
-            <div className="w-full flex py-5 justify-end max-lg:justify-center">
-                <FontAwesomeIcon className="pr-10 cursor-pointer text-mm-dark-blue " onClick={() => slideBack()} size="xl" icon={faArrowLeftLong} />
+            <div className="w-full flex py-5 justify-end max-lg:justify-center text-mm-blue">
+                <FontAwesomeIcon className="pr-10 cursor-pointer" onClick={() => slideBack()} size="xl" icon={faArrowLeftLong} />
                 <FontAwesomeIcon className="cursor-pointer" onClick={() => slideForward()} size="xl" icon={faArrowRightLong} />
             </div>
         </div>
