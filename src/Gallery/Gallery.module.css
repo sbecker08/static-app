@@ -1,20 +1,25 @@
 .gallery {
-    width: 100%;
+    /*width: 100vw;
+    margin-left: -50vw;
+    position: absolute;
 
+    left: 50%;*/
+    /*display: flex;*/
     
-    overflow: visible;
-}
-
-.galleryInner {
-    overflow: visible;
+    /*overflow: visible;
+    position: relative;
+    width: calc (((100vw - 1280) / 2) + 1300 )*/
 }
 
 .galleryTrack {
-    width: 85000px;
     
-    overflow: visible;
+    width: 100vw;
+    
+    overflow-x: scroll;
+
+    display: flex;
+
 }
 
 .cardContainer {
-    float: left;
 }

@@ -3,8 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body, html {
     margin: 0 0;
+
+    position:relative;
+
+    overflow-x: hidden;
 }
   
 a {
@@ -23,3 +27,12 @@ a:hover {
 .roboto {    
     font-family: 'Roboto', sans-serif;
 }
+
+.swiper-slide {
+    width: auto !important;
+    display: flex;
+  }
+
+  .swiper {
+    overflow: visible !important;
+  }

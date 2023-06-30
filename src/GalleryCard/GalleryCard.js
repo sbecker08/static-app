@@ -13,13 +13,13 @@ function GalleryCard({ imageUrl, propertyType, propertyName, location, unitDetai
                 <h1 className={styles.propertyName}>{propertyName}</h1>
             </div>
             <div className={styles.bodySection}>
-                <p className={styles.location}>
+                <p className="flex">
                     <Image src='/iconLocation.svg' width={12} height={17} alt="Location Icon" /><span>{location}</span>
                 </p>
-                <p className={styles.detail}>
+                <p className="flex">
                     <Image src='/iconUnits.svg' width={12} height={17} alt="Units Icon" /><span>{unitDetails}</span>
                 </p>
-                <p className={styles.capRate}>
+                <p className="flex">
                     <Image src='/iconCaprate.svg' width={12} height={17} alt="CapRate Icon" /><span>{capRate}</span>
                 </p>
                 <p className={styles.price}>
