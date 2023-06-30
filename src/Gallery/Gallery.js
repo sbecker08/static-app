@@ -48,8 +48,8 @@ function Gallery({ galleryCardInfo }) {
                     </SwiperSlide>
                 );})}
             </Swiper>
-            <div className="w-full flex">
-                <FontAwesomeIcon className="pr-4 cursor-pointer ml-auto" onClick={() => slideBack()} size="xl" icon={faArrowLeftLong} />
+            <div className="w-full flex py-5 justify-end max-lg:justify-center">
+                <FontAwesomeIcon className="pr-10 cursor-pointer text-mm-dark-blue " onClick={() => slideBack()} size="xl" icon={faArrowLeftLong} />
                 <FontAwesomeIcon className="cursor-pointer" onClick={() => slideForward()} size="xl" icon={faArrowRightLong} />
             </div>
         </div>
