@@ -1,5 +1,5 @@
 import styles  from './CallToActionCard.module.css'
-import ButtonSemiTransparent from '../../../ButtonSemiTransparent/ButtonSemiTransparent';
+import ButtonSemiTransparent from '../../Buttons/ButtonSemiTransparent/ButtonSemiTransparent';
 
 function CallToActionCard({ backgroundUrl, text, buttonText, link }) {
 

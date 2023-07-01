@@ -1,7 +1,6 @@
-import ButtonPrimary from '../../../ButtonPrimary/ButtonPrimary';
-import ButtonSecondary from '../../../ButtonSecondary/ButtonSecondary';
+import ButtonPrimary from '../../Buttons/ButtonPrimary/ButtonPrimary';
+import ButtonSecondary from '../../Buttons/ButtonSecondary/ButtonSecondary';
 import GalleryCard from '../GalleryCard/GalleryCard';
-import styles  from './GalleryHeaderCard.module.css'
 
 function GalleryHeaderCard({ superHeader, header, bodyText, buttonOneText, buttonTwoText }) {
 

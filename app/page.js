@@ -10,6 +10,8 @@ import CallToActionCard from '../src/modules/Cards/CallToActionCard/CallToAction
 
 import img from '../public/HeroImages/HeroImage1.webp'
 import CenterContainer from '../src/CenterContainer/CenterContainer';
+import ImageBackgroundContainer from '../src/ImageBackgroundContainer/ImageBackgroundContainer';
+import ButtonPrimary from '../src/modules/Buttons/ButtonPrimary/ButtonPrimary';
 
 export default function Page() {
 
@@ -43,7 +45,26 @@ export default function Page() {
                     <CallToActionCard text="Looking for Acquisition Opportunities" link="#" buttonText="Search Listings" backgroundUrl="https://www.marcusmillichap.com/-/media/Images/MM/MM%201031%20Exchange/mm-looking-to-buy-background%20jpg.jpg?rev=53455200e755459f8f04afabd424d40b&hash=D98617E8FAEBE80474BA13FEE5CD5293"></CallToActionCard>
                     <CallToActionCard text="Seeking Financing Options" link="#" buttonText="Connect with an Originator" backgroundUrl="https://www.marcusmillichap.com/-/media/Images/MM/MM%201031%20Exchange/mm-looking-for-debt-financing-background%20jpg.jpg?rev=cbb86ce786eb48679729b04ad9b1b7da&hash=49750DCF7C29C474EC7244405C03AD09"></CallToActionCard>
                 </div>
-            </CenterContainer>
+            </CenterContainer>            
+            <div className='mb-28' ></div>
+            <ImageBackgroundContainer 
+                url="https://www.marcusmillichap.com/-/media/Images/MM/MM%201031%20Exchange/mm-1031exchange-hero-background-2880%20jpg/Large%20Display.jpg?rev=844fd7d04eb5456687c6a287ffc25d11&hash=36E67CBDEA0FF896B4AD8A84E2B0E3EB" 
+                paddingTop="60px"
+                paddingBottom="60px"
+                >
+                <CenterContainer>
+                    <div className="flex flex-col items-center px-36 max-lg:px-0" >
+                        <div className="frank-ruhl text-4xl text-mm-blue font-medium text-center" >Looking to Reinvest?</div>
+                        <div className="frank-ruhl text-4xl text-mm-blue font-medium text-center">Let Us Help You With Your Next Exchange</div>
+                        <div className="w-20 my-5 border-b-2 border-b-mm-orange" ></div>
+                        <div className="text-sm text-mm-dark-blue text-center leading-6 mb-5" >
+                            Instead of immediately paying capital gains on the sale of a property (the “down leg”), many investors prefer to defer that payment by purchasing a new property (the “up leg”) with the proceeds. This is commonly referred to as a 1031 exchange, in reference to the section of U.S. tax code that defines it. There are specific rules and timelines related to a 1031 exchange, and it is important to have an experienced and knowledgeable specialist handling the process.
+                        </div>
+                        <ButtonPrimary text="Calculate Your Investment" link="#" ></ButtonPrimary>
+                    </div>
+                </CenterContainer>   
+            </ImageBackgroundContainer> 
+                
             <div className='mb-[500px]' ></div>
         </div>
     )
