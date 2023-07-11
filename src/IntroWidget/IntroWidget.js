@@ -1,6 +1,6 @@
 import styles  from './IntroWidget.module.css'
 import SingleStatComponent from '../SingleStatComponent/SingleStatComponent'
-import CenterContainer from '../CenterContainer/CenterContainer';
+import CenterContainer from '../modules/LayoutContainers/CenterContainer/CenterContainer';
 
 function GlobalHeader({ header, subHeader, children }) {
     /*

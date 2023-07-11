@@ -1,7 +1,7 @@
 import styles  from './RegionalImpact.module.css'
 import RegionalMap from "./RegionalMap/RegionalMap";
 import UserCardQuote from "../UserCardQuote/UserCardQuote"
-import CenterContainer from '../CenterContainer/CenterContainer';
+import CenterContainer from '../modules/LayoutContainers/CenterContainer/CenterContainer';
 
 function RegionalImpact() {
     return (

@@ -1,4 +1,7 @@
 import '../globalStyles.css';
+import '@contentful/live-preview/style.css';
+import { ContentfulLivePreviewProvider } from '@contentful/live-preview/react';
+
 import { Frank_Ruhl_Libre } from 'next/font/google';
 import React from 'react';
 import { MmAuthenticationZone } from '../modules/MmAuthentication/MmAuthenticationZone';
@@ -22,9 +25,11 @@ export default function RootLayout({ children }) {
             </head>
             
             <body>
-                <MmAuthenticationZone>
-                    {children}
-                </MmAuthenticationZone>
+                <ContentfulLivePreviewProvider locale="en-US">
+                    <MmAuthenticationZone>
+                        {children}
+                    </MmAuthenticationZone>
+                </ContentfulLivePreviewProvider>
             </body>
         </html>
     );

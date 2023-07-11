@@ -9,9 +9,10 @@ import ResearchGallery from '../src/ResearchGallery/ResearchGallery';
 import CallToActionCard from '../src/modules/Cards/CallToActionCard/CallToActionCard';
 
 import img from '../public/HeroImages/HeroImage1.webp'
-import CenterContainer from '../src/CenterContainer/CenterContainer';
+import CenterContainer from '../src/modules/LayoutContainers/CenterContainer/CenterContainer';
 import ImageBackgroundContainer from '../src/ImageBackgroundContainer/ImageBackgroundContainer';
 import ButtonPrimary from '../src/modules/Buttons/ButtonPrimary/ButtonPrimary';
+import GlobalFooter from '../src/GlobalFooter/GlobalFooter';
 
 export default function Page() {
 
@@ -63,9 +64,11 @@ export default function Page() {
                         <ButtonPrimary text="Calculate Your Investment" link="#" ></ButtonPrimary>
                     </div>
                 </CenterContainer>   
-            </ImageBackgroundContainer> 
-                
-            <div className='mb-[500px]' ></div>
+            </ImageBackgroundContainer>     
+            <GlobalFooter 
+                title={"View Your Insights"} 
+                subTitle={"Cutting-edge Research and Innovative Insights"}
+                content={"With research reports and videos covering over a dozen property types across the United States and Canada, MyMMI will help you make better, more informed decisions. Visit your personalized MyMMI dashboard to access your curated selections."} ></GlobalFooter>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import CenterContainer from '../CenterContainer/CenterContainer';
+import CenterContainer from '../modules/LayoutContainers/CenterContainer/CenterContainer';
 import styles  from './RegionalWidget.module.css'
 
 function RegionalWidget() {
