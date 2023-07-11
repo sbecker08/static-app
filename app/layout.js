@@ -1,3 +1,5 @@
+"use client";
+
 import '../globalStyles.css';
 import '@contentful/live-preview/style.css';
 import { ContentfulLivePreviewProvider } from '@contentful/live-preview/react';

@@ -1,3 +1,5 @@
+"use client";
+
 import GlobalHeader from '../src/GlobalHeader/GlobalHeader';
 import IntroWidget from '../src/IntroWidget/IntroWidget';
 import RegionalWidget from '../src/RegionalWidget/RegionalWidget';
@@ -7,6 +9,8 @@ import PropertyGallery from '../src/PropertyGallery/PropertyGallery';
 import NewsGallery from '../src/NewsGallery/NewsGallery';
 import ResearchGallery from '../src/ResearchGallery/ResearchGallery';
 import CallToActionCard from '../src/modules/Cards/CallToActionCard/CallToActionCard';
+
+import { ContentfulLivePreview } from '@contentful/live-preview';
 
 import img from '../public/HeroImages/HeroImage1.webp'
 import CenterContainer from '../src/modules/LayoutContainers/CenterContainer/CenterContainer';
@@ -25,10 +29,21 @@ export default function Page() {
             <GlobalHeader />
             <div className='mt-20' ></div>
             <GradientBackdrop backgrounGradientStyle="linear-gradient(to bottom, rgba(0, 40, 85, 0.75) 0%, rgba(0, 40, 85, 0.7) 80%, rgba(0, 40, 85, 0.5) 100%)" backgroundImage={img}>
-                <IntroWidget header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
+                <IntroWidget 
+                    header={'Global Reach, Local Expertise'} subHeader={'Welcome to Marcus & Millichap, the #1 commercial real estate investment sales brokerage and capital markets advisory in North America.'} />
             </GradientBackdrop>
-            <RegionalWidget />
-            <RegionalImpact />
+            
+            <div 
+                {...ContentfulLivePreview.getProps({ entryId: '5uKtTYh3znZ8Wxg11Tlbgw', fieldId: 'components' })}>
+                    
+                <RegionalWidget />
+            </div>
+            
+            <div 
+                {...ContentfulLivePreview.getProps({ entryId: '5uKtTYh3znZ8Wxg11Tlbgw', fieldId: 'components' })}>
+                    
+                <RegionalImpact />
+            </div>
             <CenterContainer>
                 <PropertyGallery galleryCardInfo={properties} />
             </CenterContainer>
