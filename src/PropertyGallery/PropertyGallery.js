@@ -7,7 +7,7 @@ function PropertyGallery({ galleryCardInfo }) {
     return (
         <Gallery>
             {[ 
-                <div key="00">
+                <div key="1000">
                     <GalleryHeaderCard 
                         superHeader="Current Pacific Northwest Listings"
                         header="Your Property Search Start Here"
@@ -22,7 +22,7 @@ function PropertyGallery({ galleryCardInfo }) {
                         </div>        
                 );}),
                 ...galleryCardInfo?.map((c, i) => { return (
-                        <div key={i + 6}>
+                        <div key={i + 100}>
                             <GalleryPropertyCard {...c}/>                      
                         </div>
                 );}) 

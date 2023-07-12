@@ -31,8 +31,8 @@ function Gallery({ children }) {
                 grabCursor={true}    
                 pagination={true}
             >
-                {children.map(c => (
-                    <SwiperSlide>
+                {children.map((c, i) => (
+                    <SwiperSlide key={i}>
                         {c}
                     </SwiperSlide>
                 ))}

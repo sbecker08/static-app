@@ -20,14 +20,14 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>          
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="description" content="This is the public facing website for the Marcus & Millichap Commercial Real Estate firm."></meta>
-            <title>Marcus and Millichap</title>
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="This is the public facing website for the Marcus & Millichap Commercial Real Estate firm."></meta>
+                <title>Marcus and Millichap</title>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
             </head>
             
             <body>
-                <ContentfulLivePreviewProvider locale="en-US">
+                <ContentfulLivePreviewProvider locale="en-US" enableInspectorMode={true} enableLiveUpdates={true}>
                     <MmAuthenticationZone>
                         {children}
                     </MmAuthenticationZone>

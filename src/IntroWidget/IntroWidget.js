@@ -4,7 +4,7 @@ import CenterContainer from '../modules/LayoutContainers/CenterContainer/CenterC
 
 import { ContentfulLivePreview } from '@contentful/live-preview';
 
-function GlobalHeader({ header, subHeader, children }) {
+function GlobalHeader({ header, subHeader, contentKey }) {
     /*
             <div className={styles.vimeoOuterWrapper}>
                 <div className={styles.vimeoInnerWrapper}>
@@ -21,13 +21,13 @@ function GlobalHeader({ header, subHeader, children }) {
                 </div>
                 <div className="mt-40">
                     <h1 
-                        {...ContentfulLivePreview.getProps({ entryId: '6y5s2lYiW1jAqFmrFot0HS', fieldId: 'header' })}
+                        {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'header' })}
                         className="text-6xl m-0">{header}</h1>
                     <h2
-                        {...ContentfulLivePreview.getProps({ entryId: '6y5s2lYiW1jAqFmrFot0HS', fieldId: 'subHeader' })}
+                        {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'subHeader' })}
                          className="my-5 mb-10 text-xl">{subHeader}</h2>
                 </div>
-                <div {...ContentfulLivePreview.getProps({ entryId: '6y5s2lYiW1jAqFmrFot0HS', fieldId: 'buttons' })}>
+                <div {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'buttons' })}>
                     <a className="border-solid border border-slate-400 bg-mm-dark-blue text-white p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Find A Property</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Gain Insights</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Connect With An Advisor</a>

@@ -12,7 +12,7 @@ function RegionalWidget() {
                     <ul className="flex">
                         {
                             links.map(l => (
-                                <li className="mr-5 "><a href="#">{l}</a></li>
+                                <li key={l} className="mr-5 "><a href="#">{l}</a></li>
                             ))
                         }
                     </ul>
