@@ -33,10 +33,6 @@
     "copy": "cpx '.next/static/**' '.next/standalone/.next/static'"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
