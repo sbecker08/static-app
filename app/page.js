@@ -8,7 +8,7 @@ import NewsGallery from '../src/NewsGallery/NewsGallery';
 import ResearchGallery from '../src/ResearchGallery/ResearchGallery';
 import CallToActionCard from '../src/modules/Cards/CallToActionCard/CallToActionCard';
 
-import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
+//import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { createClient } from 'contentful'
 
 import img from '../public/HeroImages/HeroImage1.webp'
@@ -33,11 +33,11 @@ export default async function Page() {
         content_type: 'homePage'
     });
 
-    const entries = useContentfulLiveUpdates(originalEntries);
+    //const entries = useContentfulLiveUpdates(originalEntries);
 
-    console.log(entries);
+    //console.log(entries);
 
-    var entry = entries.items.filter(i => i.fields.region == 'National')[0]
+    var entry = originalEntries.items.filter(i => i.fields.region == 'National')[0]
     var introWidget = entry?.fields?.components?.filter(c => c?.sys?.contentType?.sys?.id == 'regionalHeroComponent')[0];
 
     //const updatedEntries = useContentfulLiveUpdates(entry);

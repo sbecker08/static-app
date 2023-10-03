@@ -1,6 +1,7 @@
 "use client";
 
 import '../globalStyles.css';
+import Script from 'next/script'
 import '@contentful/live-preview/style.css';
 import { ContentfulLivePreviewProvider } from '@contentful/live-preview/react';
 
