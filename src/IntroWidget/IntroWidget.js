@@ -2,8 +2,6 @@ import styles  from './IntroWidget.module.css'
 import SingleStatComponent from '../SingleStatComponent/SingleStatComponent'
 import CenterContainer from '../modules/LayoutContainers/CenterContainer/CenterContainer';
 
-import { ContentfulLivePreview } from '@contentful/live-preview';
-
 function GlobalHeader({ header, subHeader, contentKey }) {
     /*
             <div className={styles.vimeoOuterWrapper}>
@@ -20,14 +18,10 @@ function GlobalHeader({ header, subHeader, contentKey }) {
                     <p className="ml-auto">Location: Pacific Northwest | Change Location</p>
                 </div>
                 <div className="mt-40">
-                    <h1 
-                        {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'header' })}
-                        className="text-6xl m-0">{header}</h1>
-                    <h2
-                        {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'subHeader' })}
-                         className="my-5 mb-10 text-xl">{subHeader}</h2>
+                    <h1 data-contentful-field-id='header' data-contentful-entry-id={contentKey}  className="text-6xl m-0">{header}</h1>
+                    <h2 data-contentful-field-id='subHeader' data-contentful-entry-id={contentKey}  className="my-5 mb-10 text-xl">{subHeader}</h2>
                 </div>
-                <div {...ContentfulLivePreview.getProps({ entryId: contentKey, fieldId: 'buttons' })}>
+                <div  data-contentful-field-id='buttons' data-contentful-entry-id={contentKey}>
                     <a className="border-solid border border-slate-400 bg-mm-dark-blue text-white p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Find A Property</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Gain Insights</a>
                     <a className="border-gray-800 bg-slate-100 text-mm-blue p-4 px-5 uppercase inline-block mr-2 mb-2 roboto text-sm font-semibold tracking-wider">Connect With An Advisor</a>

@@ -1,5 +1,3 @@
-"use client";
-
 import GlobalHeader from '../src/GlobalHeader/GlobalHeader';
 import IntroWidget from '../src/IntroWidget/IntroWidget';
 import RegionalWidget from '../src/RegionalWidget/RegionalWidget';
@@ -10,7 +8,6 @@ import NewsGallery from '../src/NewsGallery/NewsGallery';
 import ResearchGallery from '../src/ResearchGallery/ResearchGallery';
 import CallToActionCard from '../src/modules/Cards/CallToActionCard/CallToActionCard';
 
-import { ContentfulLivePreview } from '@contentful/live-preview';
 import { useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { createClient } from 'contentful'
 
@@ -29,13 +26,15 @@ export default async function Page() {
     const scopedPlainClient = createClient({
             space: '7or0qllst114',
             accessToken: '53KYU3lilwBK-QiZyrBpsKNNYJW1pvM2aFG3t5HNUN4',
-            host: 'preview.contentful.com',
+            host: 'preview.contentful.com'
         });
 
-    const entries = await scopedPlainClient.getEntries({
+    const originalEntries = await scopedPlainClient.getEntries({
         content_type: 'homePage'
     });
-    
+
+    const entries = useContentfulLiveUpdates(originalEntries);
+
     console.log(entries);
 
     var entry = entries.items.filter(i => i.fields.region == 'National')[0]
@@ -58,13 +57,11 @@ export default async function Page() {
                     contentKey={introWidget?.sys?.id} />
             </GradientBackdrop>
             
-            <div 
-                {...ContentfulLivePreview.getProps({ entryId: '5uKtTYh3znZ8Wxg11Tlbgw', fieldId: 'components' })}>                    
+            <div data-contentful-field-id='components' data-contentful-entry-id='5uKtTYh3znZ8Wxg11Tlbgw'>                    
                 <RegionalWidget />
             </div>
             
-            <div 
-                {...ContentfulLivePreview.getProps({ entryId: '5uKtTYh3znZ8Wxg11Tlbgw', fieldId: 'components' })}>                    
+            <div data-contentful-field-id='components' data-contentful-entry-id='5uKtTYh3znZ8Wxg11Tlbgw'>                    
                 <RegionalImpact />
             </div>
             <CenterContainer>
